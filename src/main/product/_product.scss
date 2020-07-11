@@ -1,0 +1,191 @@
+#product {
+    width: 100%;
+    padding: 200px 0 100px;
+  
+    .inner {
+      h1 {
+        font-size: 45px;
+        font-weight: 500;
+        padding-bottom: 10px;
+      }
+  
+      span {
+        font-size: 15px;
+      }
+  
+      .wrap {
+        width: 100%;
+        margin-top: 30px;
+  
+        article {
+          width: 500px;
+          height: 400px;
+          margin-bottom: 30px;
+  
+          &:nth-of-type(1) {
+            float: left;
+            width: 300px;
+            transform: translateX(100px);
+          }
+  
+          &:nth-of-type(2) {
+            float: right;
+  
+            h2 {
+              writing-mode: vertical-rl;
+              white-space: nowrap;
+              transform: translate(-100%, 0);
+              height: 50%;
+              font-size: 50px;
+              font-weight: 500;
+            }
+  
+            > div {
+              transform: translateX(30px);
+  
+              h3 {
+                font-size: 20px;
+              }
+  
+              p {
+                padding: 15px 0;
+                font-size: 15px;
+              }
+  
+              a {
+                display: block;
+                width: 100px;
+                height: 30px;
+                border: 1px solid #333;
+                line-height: 30px;
+                font-size: 13px;
+                color: #333;
+                text-align: center;
+              }
+            }
+          }
+  
+          &:nth-of-type(3) {
+            float: left;
+            transform: translate(0, 30px);
+            background: antiquewhite;
+            padding: 100px 100px 0 0;
+            box-sizing: border-box;
+  
+            p {
+              float: right;
+              width: 200px;
+            }
+          }
+  
+          &:nth-of-type(4) {
+            float: right;
+            width: 350px;
+            transform: translateY(150px);
+          }
+  
+          .imgArea {
+            position: relative;
+  
+            .pic {
+              width: 100%;
+              height: 400px;
+              overflow: hidden;
+              background: #444;
+            }
+  
+            .product_bg1 {
+              background: url(../img/content_29.jpg) no-repeat;
+              background-size: cover;
+              background-position: center;
+            }
+  
+            .product_bg3 {
+              background: url(../img/content_39.jpg) no-repeat;
+              background-size: cover;
+              background-position: top;
+            }
+          }
+        }
+      }
+    }
+  }
+
+/* ------tablet-------- */
+@media screen and (max-width:$tablet){
+    #product {
+        padding: 100px 30px 0;
+        box-sizing: border-box;
+      
+        .inner {
+          h1 {
+            font-size: 40px;
+          }
+      
+          .wrap article {
+            &:nth-of-type(1) {
+              width: 49%;
+              transform: translateX(0);
+            }
+      
+            &:nth-of-type(2) {
+              width: 49%;
+              transform: translateY(30%);
+      
+              > div {
+                transform: translateX(0);
+              }
+      
+              h2 {
+                display: none;
+              }
+            }
+      
+            &:nth-of-type(3) {
+              padding: 50px 50px 0 0;
+              width: 49%;
+              transform: translate(0, 0);
+            }
+      
+            &:nth-of-type(4) {
+              width: 49%;
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+
+}
+
+/* ------mobile-------- */
+@media screen and (max-width:$mobile){
+    #product {
+        padding: 70px 30px;
+      
+        .inner {
+          h1 {
+            font-size: 30px;
+          }
+      
+          .wrap article {
+            &:nth-of-type(1), &:nth-of-type(2) {
+              width: 100%;
+            }
+      
+            &:nth-of-type(3) {
+              padding: 50px;
+              width: 100%;
+      
+              p {
+                float: none;
+                width: 100%;
+              }
+            }
+      
+            &:nth-of-type(4) {
+              width: 100%;
+            }
+          }
+        }
+    }
+}

@@ -1,0 +1,217 @@
+
+  
+  .members {
+    
+    h2 {
+      font: bold 18px/1 'arial';
+      color: #555;
+      margin-bottom: 20px;
+    }
+  
+    .agreement {
+      margin-bottom: 60px;
+  
+      textarea {
+        width: 100%;
+        height: 160px;
+        box-sizing: border-box;
+        padding: 20px;
+        margin-bottom: 10px;
+        font: 15px/1.8 'arial';
+        color: #777;
+        background: rgba(0, 0, 0, 0.05);
+      }
+  
+      input {
+        margin-left: 10px;
+      }
+  
+      label {
+        font-size: 11px;
+        color: #888;
+      }
+    }
+  
+    table {
+      width: 100%;
+    }
+  
+    tr {
+      &:nth-of-type(1) {
+        border-top: 2px solid #000;
+      }
+  
+      &:last-child {
+        border-bottom: 2px solid #000;
+  
+        td {
+          text-align: center;
+        }
+      }
+    }
+  
+    th {
+      width: 20%;
+      border-bottom: 1px solid #ddd;
+      padding: 20px 40px;
+      text-align: left;
+      color: #666;
+      border-right: 1px solid #ddd;
+    }
+  
+    td {
+      width: 80%;
+      border-bottom: 1px solid #ddd;
+      padding: 20px 40px;
+      text-align: left;
+    }
+  
+    input {
+      &[type=text], &[type=password] {
+        width: 30%;
+        height: 30px;
+        padding: 0px 20px;
+        padding-right: 0px;
+        background: rgba(0, 0, 0, 0.03);
+        border: 1px solid #aaa;
+        transition: 0.5s;
+      }
+    }
+  
+    select {
+      width: 30%;
+      height: 30px;
+      padding: 0px 20px;
+      padding-right: 0px;
+      background: rgba(0, 0, 0, 0.03);
+      border: 1px solid #aaa;
+      transition: 0.5s;
+    }
+  
+    input {
+      &[type=text]:hover, &[type=password]:hover {
+        background: #ddd;
+      }
+    }
+  
+    select:hover {
+      background: #ddd;
+    }
+  
+    input {
+      &[type=text]:focus, &[type=password]:focus {
+        background: #ddd;
+      }
+    }
+  
+    select:focus {
+      background: #ddd;
+    }
+  
+    input {
+      &[type=text]::-webkit-input-placeholder, &[type=password]::-webkit-input-placeholder {
+        color: #aaa;
+      }
+    }
+  
+    select::-webkit-input-placeholder {
+      color: #aaa;
+    }
+  
+    input {
+      &[type=submit], &[type=reset] {
+        width: 120px;
+        height: 40px;
+        border-radius: 20px;
+        font: bold 12px/40px 'arial';
+        color: #666;
+        margin: 0px 10px;
+        cursor: pointer;
+        border: 1px solid #888;
+        background: transparent;
+        transition: 0.5s;
+      }
+  
+      &[type=submit]:hover, &[type=reset]:hover {
+        background: #111;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+  
+    label {
+      margin-right: 20px;
+    }
+  
+    table textarea {
+      width: 100%;
+      height: 120px;
+      background: rgba(0, 0, 0, 0.03);
+      border: 1px solid #aaa;
+      padding: 20px;
+      transition: 0.5s;
+  
+      &:hover, &:focus {
+        background: #ddd;
+      }
+    }
+  }
+  
+  /* tablet */
+  @media screen and (max-width: $tablet) {
+    .members {
+      >.inner{
+        width: 100%;
+        padding: 0 30px 100px;
+        box-sizing: border-box; 
+
+        th {
+          display: none;
+        }
+    
+        td {
+          width: 100%;
+    
+          input {
+            &[type=text], &[type=password] {
+              width: 100%;
+            }
+          }
+    
+          select {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  /* mobile */
+  @media screen and (max-width: $mobile) {
+    .members {
+
+       > .inner {
+    
+
+    h1{
+      font-size: 28px;
+    }
+    
+    
+      td {
+        padding: 20px 0;
+        label {
+          margin-right: 7px;
+        }
+    
+        input {
+          &[type=submit], &[type=reset] {
+            width: 80px;
+            margin: 0px 5px;
+          }
+        }
+      }
+    } 
+  } 
+}
